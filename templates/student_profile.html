@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Students Profile </title>
+    <h1>Welcome to your profile,{{name}} </h1><br>
+    {% if is_topper%}
+    <p>You are a Topper</p><br>
+    {% else %} 
+    <p> You need to Work Hard </p><br>
+    {% endif %}
+    <h2>Your Enrolled Subjects</h2>
+    <ul>
+        {%for course in courses%}
+        <li>{{course}}</li>
+        {% endfor %}
+    </ul>
+</head>
+<body>
+    
+</body>
+</html>

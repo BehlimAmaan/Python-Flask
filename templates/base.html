@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %} My Website {% endblock %}</title>
+    <style>
+        body{font-family: Arial, Helvetica, sans-serif; padding: 20px;}
+        header{background: black; color: red;padding: 20px;}
+        footer{background: black;color: brown;padding: 20px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1> My Web site </h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/contact">/Contact</a>
+            <a herf="/about">/About</a>
+        </nav>
+    </header>
+    {%block content%}
+    {%endblock%}
+<footer>@amaan Ths is a demo website for learning</footer>
+</body>
+</html>
