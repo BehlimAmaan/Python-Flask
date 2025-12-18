@@ -1,8 +1,10 @@
 from flask import Flask, Response, request, redirect, session, url_for, render_template
 
+
 app = Flask(__name__)
 app.secret_key="supersecret"
 
+#Login Page
 @app.route("/", methods=["GET","POST"])
 def login():
     if request.method== "POST":
@@ -17,12 +19,14 @@ def login():
              
     return render_template("login.html")
 
+#Welcome page
 @app.route("/welcome")
 def welcome():
     if "user" in session:
         return render_template("welcome.html")
     return redirect(url_for("login"))
 
+#Logout
 @app.route("/logout")
 def logout():
     session.pop("user",None)
@@ -31,6 +35,7 @@ def logout():
     
 if __name__=="__main__":
     app.run(debug=True)
+
 
  
             
